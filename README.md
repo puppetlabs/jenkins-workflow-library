@@ -74,6 +74,7 @@ puppet.run 'production', target: 'Rgbank', concurrency: 10, noop: true
 
 ## Roadmap
 
+* Add ability to wait until an orchestrator job has completed and fail if the job failed.
 * Turn into an actual Jenkins plugin.  Will provide config settings for RBAC token and Puppet Enterprise master URL
 * Automatically pull CA certificate from Puppet Master
 * Add ability to manage Node Manager functions such as modifying classes, parameters, and rules
