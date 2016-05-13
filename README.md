@@ -48,7 +48,7 @@ puppet.deployCode 'production'
 
 Multiple environments can be specified with an array:
 ```
-puppet.deployCode(['qa','stagin'])
+puppet.deployCode(['qa','staging'])
 ```
 
 #### run
