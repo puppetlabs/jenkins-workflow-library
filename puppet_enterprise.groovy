@@ -8,7 +8,7 @@ def json_parser(string) {
 def pe_request( Map parameters = [:], String endpoint ) {
   assert parameters.port instanceof Integer
 
-  sh "/opt/puppetlabs/bin/puppet config print server --config /etc/puppetlabs/puppet/puppet.conf"
+  sh "/opt/puppetlabs/bin/puppet config print server --config /etc/puppetlabs/puppet/puppet.conf > return_body"
   def puppet_master = readFile('return_body').trim()
 
   def curl_cmd = "curl --cacert /var/lib/jenkins/ca.pem https://${puppet_master}:${parameters.port}${endpoint}"
